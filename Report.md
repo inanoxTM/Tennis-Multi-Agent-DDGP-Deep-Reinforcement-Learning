@@ -7,7 +7,8 @@
 2. [Learning Algorithm](#LA)
 3. [Hyperparameters](#hyper)
 4. [Results](#Results)
-5. [Next Steps](#NextSteps)
+5. [Results Video](#ResultsVideo)
+6. [Next Steps](#NextSteps)
 
 
 ## Introduction <a name="introduction"></a>
@@ -68,6 +69,13 @@ Two tests have been carried out to analyse how far the model could go. The first
 The next test (approach 2) as to leave the agents learning until they achieved an average score of 2 for 100 consecutive episodes. It has reached this result in 1489 episodes. The models has been saved with {app2} sufix. 
 
 ![Results](/images/approach2.png)
+
+https://www.youtube.com/watch?v=kBvk4nx8Q4Q
+
+[![Video](images/yt.png)](https://www.youtube.com/watch?v=kBvk4nx8Q4Q)
+
+
+## Video of the agents <a name="ResultsVideo"></a>
 
 ## Next Steps <a name="NextSteps"></a>
 The next steps to improve the results can be the following: 
