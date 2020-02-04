@@ -64,18 +64,22 @@ The Parameters used for the Agent are:
 
 ## Results DDGP <a name="Results"></a>
 Two tests have been carried out to analyse how far the model could go. The first one (Approach 1) has been carried out to solve the objectives proposed by the exercise: To reach 0.5 of reward in 100 consecutive episodes. The models are saved when the result is reached and it has been solved in 600 episodes.
+
 ![Results](/images/approach1.png)
 
 The next test (approach 2) as to leave the agents learning until they achieved an average score of 2 for 100 consecutive episodes. It has reached this result in 1489 episodes. The models has been saved with {app2} sufix. 
 
 ![Results](/images/approach2.png)
 
+
+## Video of the agents <a name="ResultsVideo"></a>
+
 https://www.youtube.com/watch?v=kBvk4nx8Q4Q
 
 [![Video](images/yt.png)](https://www.youtube.com/watch?v=kBvk4nx8Q4Q)
 
 
-## Video of the agents <a name="ResultsVideo"></a>
+
 
 ## Next Steps <a name="NextSteps"></a>
 The next steps to improve the results can be the following: 
