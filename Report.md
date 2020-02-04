@@ -20,7 +20,7 @@ In our case, option 2 was performed, using 20 agents, as it trained faster.
 
 ## Learning Algorithm <a name="LA"></a>
 
-The algorithm I used for this project is the DDPG Actor Critic Model ([paper](https://deepmind.com/research/publications/continuous-control-deep-reinforcement-learning)).
+The algorithm I used for this project is the Multi-Agent DDPG Actor Critic Model ([paper](https://deepmind.com/research/publications/continuous-control-deep-reinforcement-learning)).
 
 In order to explain this algorithm, first, it needs to know that there are two ways for estimating expected returns. First is the Monte Carlo estimate, which roles out an episode in calculating the discounter total reward from the rewards sequence. In Dynamic Programming, the Markov Decision Process (MDP) is solved by using value iteration and policy iteration. Both techniques require transition and reward probabilities to find the optimal policy. When the transition and reward probabilities are unknown, we use the Monte Carlo method to solve MDP. The Monte Carlo method requires only sample sequences of states, actions, and rewards. Monte Carlo methods are applied only to the episodic tasks.
 
@@ -46,19 +46,21 @@ The Parameters used for the Agent are:
 | Replay Buffer Size  | 1e6  |
 | Minibatch Size  | 128 |
 | Discount Rate  | 0.99  |
-| TAU  | 1e-3  |
-| Actor Learning Rate  | 5e-4  |
-| Critic Learning Rate  | 6e-4  |
-| Neurons Actor Netork Layer 1 | 168  |
-| Neurons Actor Netork Layer 2 | 124  |
-| Neurons Critic Netork Layer 1 | 168  |
-| Neurons Critic Netork Layer 2 | 124  |
-
+| TAU  | 9e-3  |
+| Actor Learning Rate  | 0.0007  |
+| Critic Learning Rate  | 0.0007  |
+| Neurons Actor Netork Layer 1 | 128  |
+| Neurons Actor Netork Layer 2 | 64  |
+| Neurons Critic Netork Layer 1 | 128  |
+| Neurons Critic Netork Layer 2 | 64  |
 
 ## Results DDGP <a name="Results"></a>
-The environment has been solved in 280 episodes, but, around less than 100 episodes we get a scored around 25. It could be due to the number units of our ANN and its possible get fast results It is possible to obtain faster results by increasing this number. 
+Two tests have been carried out to analyse how far the model could go. The first one (Approach 1) has been carried out to solve the objectives proposed by the exercise: To reach 0.5 of reward in 100 consecutive episodes. The models are saved when the result is reached and it has been solved in 600 episodes.
+![Results](/images/approach1.png)
 
-![Results](/images/descarga.png)
+The next test (approach 2) as to leave the agents learning until they achieved an average score of 2 for 100 consecutive episodes. It has reached this result in 1489 episodes. The models has been saved with {app2} sufix. 
+
+![Results](/images/approach2.png)
 
 ## Next Steps <a name="NextSteps"></a>
 The next steps to improve the results can be the following: 
@@ -67,5 +69,6 @@ The next steps to improve the results can be the following:
 2) Change ANN by LSTM 
 3) Test other algorithm like as A3C, TD3, PPO.
 4) Add Prioritized Replay
+5) Add batch Normalization
 
 
